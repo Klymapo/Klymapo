@@ -1,0 +1,73 @@
+# Mapa de repositorios públicos · KLYMAPO
+
+**Objetivo:** encontrar proyectos con rapidez sin fusionar repositorios, alterar su historial ni publicar información de repositorios privados.
+
+El repositorio `Klymapo/Klymapo` es la **portada** y contiene el [dashboard](index.html). El número de repositorios que muestra el dashboard excluye la propia portada.
+
+## 01 · Videojuegos y rol
+
+| Repositorio | Uso | Topics propuestos |
+| --- | --- | --- |
+| [pokemon-infinito](https://github.com/Klymapo/pokemon-infinito) | RPG personal para móvil; **no modificar ni reorganizar su interior** | `rpg`, `pwa`, `game-development` |
+| [ficha-dnd](https://github.com/Klymapo/ficha-dnd) | Ficha interactiva para juego de rol | `dungeons-and-dragons`, `character-sheet`, `web-app` |
+
+## 02 · Modelado y producción 3D
+
+| Repositorio | Uso | Topics propuestos |
+| --- | --- | --- |
+| [alth-meta](https://github.com/Klymapo/alth-meta) | Producción y auditoría de assets ALTH-META/AlasTheo | `blender`, `3d-modeling`, `alastheo` |
+
+La investigación paramétrica, las pruebas de estilización y el juego Godot tienen sus **propios repositorios privados**. No se exponen aquí sus nombres ni rutas.
+
+## 03 · Aplicaciones e IA
+
+| Repositorio | Uso | Topics propuestos |
+| --- | --- | --- |
+| [ATLAS](https://github.com/Klymapo/ATLAS) | Aprendizaje de idiomas a través de una aventura detectivesca | `language-learning`, `education`, `pwa` |
+| [rupert](https://github.com/Klymapo/rupert) | Asistente personal orientado a móvil y nube | `personal-assistant`, `pwa`, `supabase` |
+
+## 04 · Archivo histórico
+
+| Repositorio | Uso | Topics propuestos |
+| --- | --- | --- |
+| [ALASTHEO](https://github.com/Klymapo/ALASTHEO) | Fuente histórica integrada en alth-meta; actualmente archivado | `alastheo`, `archive`, `3d-modeling` |
+| [Terminal-Adventure-](https://github.com/Klymapo/Terminal-Adventure-) | RPG de terminal en Python | `python`, `text-adventure`, `learning-project` |
+| [Dungeon-Meshi-Delivery-Service](https://github.com/Klymapo/Dungeon-Meshi-Delivery-Service) | Práctica web inicial | `html`, `web-development`, `learning-project` |
+
+**Archivo histórico** es una *clasificación editorial*; no significa que todos estos repositorios hayan sido archivados mediante la función Archive de GitHub.
+
+## 05 · Espacios de expansión
+
+Las áreas **Data y portafolio** y **Escritura** están reservadas para futuros repositorios **que decidas hacer públicos**. Los contenidos privados se gestionan en el [tablero de GitHub Projects](https://github.com/users/Klymapo/projects), con las vistas y permisos configurados en tu cuenta.
+
+## Aplicar Topics en GitHub
+
+Los Topics no se asignan desde este documento. Para configurar cada uno:
+
+1. Abrir el repositorio.
+2. En el bloque **About**, pulsar el engranaje.
+3. Añadir los Topics propuestos sin signos de código ni comas, y guardar.
+
+Esta operación requiere acceso a los ajustes de GitHub. El conector usado para esta organización **no permite editar Topics, la descripción administrativa, los repositorios fijados ni el estado Archived**.
+
+## Selección propuesta para los 6 fijados (*Pinned*)
+
+1. ATLAS — aprendizaje, narrativa y producto.
+2. alth-meta — modelado y pipeline 3D.
+3. rupert — aplicación/arquitectura cloud.
+4. pokemon-infinito — videojuego personal.
+5. ficha-dnd — interfaz web de herramienta.
+6. Terminal-Adventure- — evolución de habilidades Python.
+
+En el perfil de GitHub: **Customize your pins** → marcar hasta seis → ordenarlos → **Save pins**.
+
+## Reglas de mantenimiento
+
+- Un repositorio = una unidad de producto o experimento con historial autónomo.
+- No fusionar versiones Godot ni modelos aceptados sin comparar commits, recursos y pruebas.
+- No usar submódulos salvo dependencia real entre proyectos.
+- Mantener **Topics** para búsquedas y **GitHub Projects** para tareas; las carpetas del dashboard son una forma visual de organizar, no una estructura de directorios real.
+- Un repositorio archivado no se elimina, pero GitHub lo deja de solo lectura hasta desarchivarlo.
+- Verificar la privacidad **antes** de enlazar o copiar información al dashboard público.
+
+Última revisión del inventario: 2026-10-12.

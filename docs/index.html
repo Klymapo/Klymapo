@@ -97,8 +97,15 @@
               <button class="chip" type="button" data-chip="datos">Data</button>
               <button class="chip" type="button" data-chip="escritura">Escritura</button>
               <button class="chip" type="button" data-chip="historico">Históricos</button>
-            </div><span class="result-count" id="results-count" aria-live="polite">8 resultados</span></div>
-          <div class="cards-grid" id="repo-grid" aria-live="polite"></div>
+            </div>
+            <div class="view-toolbar">
+              <span class="result-count" id="results-count" aria-live="polite">8 resultados</span>
+              <div class="view-switch" role="group" aria-label="Vista de repositorios">
+                <button type="button" id="view-folders" class="view-button active" aria-pressed="true" title="Agrupar por áreas">▤ <span>Carpetas</span></button>
+                <button type="button" id="view-cards" class="view-button" aria-pressed="false" title="Mostrar todas las tarjetas">▦ <span>Tarjetas</span></button>
+              </div>
+            </div></div>
+          <div class="repo-list" id="repo-grid" aria-live="polite"></div>
           <div class="empty-state hidden" id="empty-state"><span class="empty-icon" aria-hidden="true">⌕</span><h3>Nada por aquí… todavía.</h3><p>Prueba otra búsqueda o vuelve a ver todos los proyectos.</p><button type="button" id="clear-filters" class="button-primary">Limpiar filtros</button></div>
         </section>
 

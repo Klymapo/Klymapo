@@ -6,27 +6,35 @@ Desarrollo herramientas de datos, software y proyectos narrativos. Aquí compart
 
 ## Centro de Control
 
-🗂️ [Ver código y guía del dashboard](docs/DEPLOYMENT.md) · [Abrir el explorador (GitHub Pages, una vez activado)](https://klymapo.github.io/Klymapo/)
+🗂️ [Explorar el dashboard](https://klymapo.github.io/Klymapo/) · [Mapa de repositorios y Topics](docs/ORGANIZACION_REPOS.md) · [Guía del dashboard](docs/DEPLOYMENT.md)
 
-El explorador muestra únicamente **proyectos públicos**, permite buscar y filtrar por área y consulta actividad pública en GitHub. Para los proyectos privados y las tareas, utiliza [GitHub Projects](https://github.com/users/Klymapo/projects). **La publicación web requiere habilitar GitHub Pages en Settings → Pages con `main` / `docs`.**
+El explorador muestra únicamente **proyectos públicos**, permite buscar y filtrar por área y consulta actividad pública en GitHub. Para los proyectos privados y las tareas, utiliza [GitHub Projects](https://github.com/users/Klymapo/projects). La interfaz publicada se alimenta de los repositorios públicos; los proyectos privados se administran aparte.
 
-## Proyectos públicos
+## Proyectos públicos ordenados
 
-| Área | Repositorio | De qué trata |
-| --- | --- | --- |
-| 🧠 Idiomas y aprendizaje | [ATLAS — El Archivo de las Cuatro Voces](https://github.com/Klymapo/ATLAS) | Aventura detectivesca y aprendizaje multilingüe, con validación de contenidos. |
-| 🤖 Herramientas | [Rupert](https://github.com/Klymapo/rupert) | Asistente personal orientado a móvil y servicios en la nube. |
-| 🎨 Modelado 3D | [ALTH-META / AlasTheo](https://github.com/Klymapo/alth-meta) | Producción, referencias, Blender y auditorías de assets estilizados. |
-| 🎲 Rol | [Ficha D&D](https://github.com/Klymapo/ficha-dnd) | Ficha interactiva en HTML para partidas de rol. |
-| 🕹️ Juegos | [Pokémon Infinite](https://github.com/Klymapo/pokemon-infinito) | Proyecto personal de aventura y RPG para móvil. |
+### 🎮 Videojuegos y rol
 
-## Archivo de aprendizaje
+- [Pokémon Infinite](https://github.com/Klymapo/pokemon-infinito) — RPG personal para móvil.
+- [Ficha D&D](https://github.com/Klymapo/ficha-dnd) — ficha interactiva de rol.
 
-Estos primeros proyectos se conservan para mostrar el camino recorrido, no como productos terminados:
+### 🎨 Modelado y producción 3D
 
-- [Terminal Adventure](https://github.com/Klymapo/Terminal-Adventure-) — pequeño RPG narrativo en Python y consola.
-- [Dungeon Meshi Delivery Service](https://github.com/Klymapo/Dungeon-Meshi-Delivery-Service) — práctica de desarrollo web.
-- [ALASTHEO](https://github.com/Klymapo/ALASTHEO) — repositorio de origen histórico, integrado documentalmente en ALTH-META.
+- [ALTH-META / AlasTheo](https://github.com/Klymapo/alth-meta) — assets 3D, estándares, pruebas y COPOX.
+
+### 🤖 Aplicaciones e IA
+
+- [ATLAS · Cuatro Voces](https://github.com/Klymapo/ATLAS) — aventura detectivesca de aprendizaje multilingüe.
+- [Rupert](https://github.com/Klymapo/rupert) — asistente personal con arquitectura en la nube.
+
+### 🗃️ Archivo histórico
+
+- [ALASTHEO](https://github.com/Klymapo/ALASTHEO) — origen ya archivado e integrado en ALTH-META.
+- [Terminal Adventure](https://github.com/Klymapo/Terminal-Adventure-) — proyecto inicial de Python.
+- [Dungeon Meshi Delivery Service](https://github.com/Klymapo/Dungeon-Meshi-Delivery-Service) — proyecto inicial web.
+
+**Áreas reservadas:** Data y portafolio · Escritura. Los proyectos privados no aparecen en esta lista pública.
+
+El [mapa detallado](docs/ORGANIZACION_REPOS.md) incluye Topics recomendados y el procedimiento para fijar los repositorios destacados.
 
 ## Datos, tecnología y narrativa
 
