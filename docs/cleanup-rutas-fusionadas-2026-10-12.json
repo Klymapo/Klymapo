@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-12",
+  "branches": [
+    {
+      "name": "audit/cleanup-2026-10-12",
+      "sha": "79a28e49bd21cfaa2edf83dae6ab5a6fc2c54d40",
+      "pr": 6
+    },
+    {
+      "name": "audit/dashboard-retired-repos-2026-10-12",
+      "sha": "ea5e1ca12d46c0d0f9b4f0fa9cb332f05e8fdc2b",
+      "pr": 7
+    },
+    {
+      "name": "chore/avoid-archived-repo-links-2026-10-12",
+      "sha": "7b4db4b31ff725b09af1a8cc4542be46c126b9ae",
+      "pr": 5
+    },
+    {
+      "name": "chore/organizacion-2026-10-12",
+      "sha": "ccf9092368b9c13ff1981c2cad7e10dc5f33cb09",
+      "pr": 1
+    },
+    {
+      "name": "consolidation/old-learning-projects-2026-10-12",
+      "sha": "d23b61b7518c663b872e5f3a7a991ac12026deb3",
+      "pr": 4
+    },
+    {
+      "name": "feat/centro-control-dashboard-2026-10-12",
+      "sha": "c3163532625779c87d2bc9da0eb3e1fbf5b5b056",
+      "pr": 2
+    },
+    {
+      "name": "feat/organizar-repos-en-dashboard-2026-10-12",
+      "sha": "48817eec8877ba497c41786c830071dcc66f9d48",
+      "pr": 3
+    },
+    {
+      "name": "organizacion/guia-clara-2026-10-12",
+      "sha": "3864f65228e1abe7e80cad76270cfbfe0795aa13",
+      "pr": 8
+    }
+  ]
+}
