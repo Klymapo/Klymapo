@@ -9,8 +9,7 @@ const CURATED = [
   {slug:"rupert",title:"Rupert",category:"apps",status:"Activo",description:"Asistente personal con interfaz móvil y arquitectura en la nube, pensado para uso cotidiano.",tags:["Asistente","PWA","Supabase"],icon:"⌘",tone:"blue",rank:4},
   {slug:"ficha-dnd",title:"Ficha D&D",category:"videojuegos",status:"Herramienta",description:"Ficha interactiva de personaje para partidas de rol, diseñada para funcionar desde el navegador.",tags:["D&D","HTML","Rol"],icon:"⚄",tone:"gold",rank:5},
   {slug:"ALASTHEO",title:"ALASTHEO · Origen",category:"historico",status:"Histórico",description:"Repositorio histórico de AlasTheo. Su documentación de producción fue incorporada a ALTH-META.",tags:["Historial","AlasTheo","3D"],icon:"◷",tone:"purple",rank:6},
-  {slug:"Terminal-Adventure-",title:"Terminal Adventure",category:"historico",status:"Histórico",description:"RPG narrativo en Python para consola, conservado como proyecto de aprendizaje y práctica.",tags:["Python","RPG","Aprendizaje"],icon:">_",tone:"gold",rank:7},
-  {slug:"Dungeon-Meshi-Delivery-Service",title:"Dungeon Meshi Delivery",category:"historico",status:"Histórico",description:"Primeras prácticas de desarrollo web con una página inspirada en Dungeon Meshi.",tags:["HTML","CSS","Aprendizaje"],icon:"✦",tone:"blue",rank:8}
+  {slug:"Klymapo",title:"Archivo de aprendizaje",category:"historico",status:"Histórico",description:"Terminal Adventure (Python) y Dungeon Meshi Delivery (HTML), preservados con sus archivos originales verificados.",tags:["Python","HTML","Aprendizaje"],icon:">_",tone:"gold",rank:7,url:"https://github.com/Klymapo/Klymapo/tree/main/archive/learning"}
 ];
 const LABELS={all:"Todos",videojuegos:"Videojuegos",modelado:"Modelado 3D",apps:"Aplicaciones e IA",datos:"Data y portafolio",escritura:"Escritura",historico:"Archivo histórico"};
 const OWNER="Klymapo", CACHE_KEY="klymapo_public_metadata_v1", FAV_KEY="klymapo_public_favorites_v1";
@@ -30,7 +29,7 @@ state.favorites=Array.isArray(previousFavorites)?previousFavorites.filter(x=>typ
 const $=id=>document.getElementById(id);
 function node(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e;}
 function dateLabel(iso){if(!iso)return "Actividad no disponible";const d=new Date(iso);if(Number.isNaN(d.getTime()))return "Actividad no disponible";return "Actividad: "+new Intl.DateTimeFormat("es-MX",{day:"numeric",month:"short",year:"numeric"}).format(d);}
-function projectUrl(repo){return "https://github.com/"+OWNER+"/"+encodeURIComponent(repo.slug);}
+function projectUrl(repo){return repo.url||("https://github.com/"+OWNER+"/"+encodeURIComponent(repo.slug));}
 function filtered(){
   let items=CURATED.filter(r=>{
     const matchesCategory=state.category==="all"||r.category===state.category;
@@ -61,7 +60,7 @@ function buildCard(repo){
   const footer=node("div","card-footer");
   const info=state.metadata[repo.slug];
   footer.append(node("span","card-update",dateLabel(info?.pushed_at)));
-  const link=node("a","card-action","Ver repositorio ↗");link.href=projectUrl(repo);link.target="_blank";link.rel="noopener noreferrer";link.setAttribute("aria-label","Abrir "+repo.title+" en GitHub");footer.append(link);
+  const link=node("a","card-action",repo.url?"Ver archivo ↗":"Ver repositorio ↗");link.href=projectUrl(repo);link.target="_blank";link.rel="noopener noreferrer";link.setAttribute("aria-label","Abrir "+repo.title+" en GitHub");footer.append(link);
   card.append(footer);return card;
 }
 const AREA_ORDER=["videojuegos","modelado","apps","historico","datos","escritura"];
@@ -106,7 +105,7 @@ function render(){
   $("view-cards").setAttribute("aria-pressed",String(!folders));
   $("empty-state").classList.toggle("hidden",items.length!==0);
   $("results-count").textContent=items.length+" resultado"+(items.length===1?"":"s");
-  $("metric-total").textContent=CURATED.length;
+  $("metric-total").textContent=CURATED.filter(x=>x.slug!=="Klymapo").length;
   $("count-all").textContent=CURATED.length;
   $("metric-active").textContent=CURATED.filter(x=>x.status==="Activo").length;
   $("metric-archive").textContent=CURATED.filter(x=>x.status==="Histórico").length;
