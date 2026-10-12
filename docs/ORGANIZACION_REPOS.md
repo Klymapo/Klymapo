@@ -9,7 +9,6 @@ El repositorio `Klymapo/Klymapo` es la **portada** y contiene el [dashboard](ind
 | Repositorio | Uso | Topics propuestos |
 | --- | --- | --- |
 | [pokemon-infinito](https://github.com/Klymapo/pokemon-infinito) | RPG personal para móvil; **no modificar ni reorganizar su interior** | `rpg`, `pwa`, `game-development` |
-| [ficha-dnd](https://github.com/Klymapo/ficha-dnd) | Ficha interactiva para juego de rol | `dungeons-and-dragons`, `character-sheet`, `web-app` |
 
 ## 02 · Modelado y producción 3D
 
@@ -49,16 +48,16 @@ Los Topics no se asignan desde este documento. Para configurar cada uno:
 
 Esta operación requiere acceso a los ajustes de GitHub. El conector usado para esta organización **no permite editar Topics, la descripción administrativa, los repositorios fijados ni el estado Archived**.
 
-## Selección propuesta para los 6 fijados (*Pinned*)
+## Selección propuesta de repositorios fijados (*Pinned*)
 
 1. ATLAS — aprendizaje, narrativa y producto.
-2. alth-meta — modelado y pipeline 3D.
+2. alth-meta — modelado y pipeline 3D (incluye Stylizer y documentación ALASTHEO).
 3. rupert — aplicación/arquitectura cloud.
 4. pokemon-infinito — videojuego personal.
 5. ficha-dnd — interfaz web de herramienta.
-6. Terminal-Adventure- — evolución de habilidades Python.
+La ficha de mesa D&D se consolidó en un repositorio privado de juego; no se enumera aquí como aplicación pública independiente. El repositorio público antiguo podrá desaparecer cuando se complete la exportación de datos del navegador.
 
-En el perfil de GitHub: **Customize your pins** → marcar hasta seis → ordenarlos → **Save pins**.
+Solo hay cuatro proyectos principales públicos listados, así que no es necesario llenar seis lugares con repositorios archivados o ficticios. En el perfil de GitHub: **Customize your pins** → marcar los existentes → ordenarlos → **Save pins**.
 
 ## Reglas de mantenimiento
 
