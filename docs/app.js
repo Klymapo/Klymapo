@@ -7,8 +7,7 @@ const CURATED = [
   {slug:"alth-meta",title:"ALTH-META / AlasTheo",category:"modelado",status:"Activo",description:"Producción de personajes y assets 3D estilizados, referencias, Blender y auditorías con COPOX.",tags:["Blender","Modelado 3D","COPOX"],icon:"⬡",tone:"blue",rank:2},
   {slug:"pokemon-infinito",title:"Pokémon Infinite",category:"videojuegos",status:"Activo",description:"Aventura RPG personal para móvil, con historia extensible y funcionamiento como aplicación web.",tags:["RPG","PWA","JavaScript"],icon:"◈",tone:"purple",rank:3},
   {slug:"rupert",title:"Rupert",category:"apps",status:"Activo",description:"Asistente personal con interfaz móvil y arquitectura en la nube, pensado para uso cotidiano.",tags:["Asistente","PWA","Supabase"],icon:"⌘",tone:"blue",rank:4},
-  {slug:"ficha-dnd",title:"Ficha D&D",category:"videojuegos",status:"Herramienta",description:"Ficha interactiva de personaje para partidas de rol, diseñada para funcionar desde el navegador.",tags:["D&D","HTML","Rol"],icon:"⚄",tone:"gold",rank:5},
-  {slug:"Klymapo",title:"Archivo de aprendizaje",category:"historico",status:"Histórico",description:"Terminal Adventure (Python) y Dungeon Meshi Delivery (HTML), preservados con sus archivos originales verificados.",tags:["Python","HTML","Aprendizaje"],icon:">_",tone:"gold",rank:6,url:"https://github.com/Klymapo/Klymapo/tree/main/archive/learning"}
+  {slug:"Klymapo",title:"Archivo de aprendizaje",category:"historico",status:"Histórico",description:"Terminal Adventure (Python) y Dungeon Meshi Delivery (HTML), preservados con sus archivos originales verificados.",tags:["Python","HTML","Aprendizaje"],icon:">_",tone:"gold",rank:5,url:"https://github.com/Klymapo/Klymapo/tree/main/archive/learning"}
 ];
 const LABELS={all:"Todos",videojuegos:"Videojuegos",modelado:"Modelado 3D",apps:"Aplicaciones e IA",datos:"Data y portafolio",escritura:"Escritura",historico:"Archivo histórico"};
 const OWNER="Klymapo", CACHE_KEY="klymapo_public_metadata_v1", FAV_KEY="klymapo_public_favorites_v1";
@@ -128,11 +127,11 @@ async function refresh(force=false){
     if(!response.ok)throw new Error("GitHub API "+response.status);
     const data=await response.json();if(!Array.isArray(data))throw new Error("Respuesta inesperada");
     const updated={};
-    for(const item of data){if(item && item.private===false && typeof item.name==="string" && !item.archived /* archived still used for activity below */) {
-      updated[item.name]={pushed_at:item.pushed_at||null,archived:Boolean(item.archived)};
-    }else if(item && item.private===false && typeof item.name==="string"){
-      updated[item.name]={pushed_at:item.pushed_at||null,archived:Boolean(item.archived)};
-    }}
+    for(const item of data){
+      if(item && item.private===false && typeof item.name==="string"){
+        updated[item.name]={pushed_at:item.pushed_at||null,archived:Boolean(item.archived)};
+      }
+    }
     state.metadata=updated;state.lastSync=Date.now();
     safeSave(CACHE_KEY,{timestamp:state.lastSync,repos:updated});
     displaySync("GitHub · información pública");
