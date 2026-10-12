@@ -19,3 +19,19 @@
 @media(max-width:850px){.sidebar{position:fixed;transform:translateX(-102%);transition:transform .2s ease;box-shadow:18px 0 55px #0005}.sidebar.open{transform:translateX(0)}.mobile-overlay{display:block;position:fixed;inset:0;background:#0009;z-index:20}.mobile-overlay.hidden{display:none}.mobile-menu{display:inline-flex;justify-content:center;align-items:center;border:1px solid #33445f;background:#1a263b;color:white;border-radius:8px;width:35px;height:35px;font-size:16px}.topbar{height:60px}.main-content{padding-top:22px}.hero{padding:34px}.hero-decoration{right:-55px}.metrics{margin-bottom:35px}}
 @media(max-width:600px){.topbar{padding:0 17px}.top-right{gap:8px}.top-right #sync-label{display:none}.github-action{padding:7px 10px;margin:0}.main-content{padding:16px 15px 24px}.hero{min-height:320px;padding:28px 24px;border-radius:16px}.hero h1{font-size:37px}.hero p{font-size:12px;max-width:360px}.hero-decoration{right:-115px;opacity:.21}.hero-actions{gap:9px}.button-primary,.button-ghost{font-size:11px;padding:11px 13px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:11px 0 32px}.metric{padding:14px}.metric-caption{font-size:10px}.metric-value{font-size:28px}.section-header{align-items:flex-start}.section-header h2{font-size:24px}.section-subtitle{font-size:11px}.refresh-button{padding:8px;font-size:0}.refresh-button span{font-size:20px;margin:0}.filter-bar{flex-wrap:wrap}.search-wrapper{flex-basis:100%}.sort-label,.sort-label select{width:100%}.active-filters{align-items:flex-start;flex-direction:column}.cards-grid{grid-template-columns:minmax(0,1fr);gap:11px}.repo-card{min-height:226px}.end-banner{display:block;padding:23px 20px}.button-secondary{margin-top:18px}.footer{flex-direction:column;gap:6px}.side-link{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* Explorador de repositorios: carpetas por área, sin alterar repos Git */
+.view-toolbar{display:flex;align-items:center;gap:12px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.view-switch{display:inline-flex;padding:3px;gap:3px;border:1px solid #34445d;background:#11192b;border-radius:10px}
+.view-button{border:1px solid transparent;border-radius:7px;background:transparent;color:#97a9c4;padding:6px 10px;font-size:11px;font-weight:700;white-space:nowrap}
+.view-button.active{border-color:#42746b;background:#25443f;color:#a4eedf}
+.view-button:hover{color:#f2ffff}
+.repo-list.folders-view{display:flex;flex-direction:column;gap:32px}
+.folder-section{min-width:0}
+.folder-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 1px 13px;margin-bottom:15px;border-bottom:1px solid #2d4056}
+.folder-caption{display:flex;align-items:center;gap:12px;min-width:0}
+.folder-icon{display:grid;place-items:center;width:36px;height:36px;flex:0 0 36px;border:1px solid #416776;border-radius:10px;color:#a3e9db;background:#193849;font-size:19px}
+.folder-head-copy h3{font:600 17px var(--display);margin:0;color:#ecf5ff}
+.folder-head-copy p{font-size:10.5px;color:#91a3ba;margin:4px 0 0}
+.folder-count{font-size:10px;white-space:nowrap;color:#a5bfce;border:1px solid #344c5e;background:#1b2c3e;border-radius:8px;padding:6px 9px}
+@media(max-width:600px){.active-filters{gap:12px}.view-toolbar{width:100%;justify-content:space-between}.folder-head{align-items:flex-start;gap:6px}.folder-head-copy h3{font-size:15px}.folder-head-copy p{font-size:10px}.folder-count{font-size:9px}.repo-list.folders-view{gap:27px}.view-button{padding:6px 8px}}
