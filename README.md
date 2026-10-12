@@ -15,7 +15,6 @@ El explorador muestra únicamente **proyectos públicos**, permite buscar y filt
 ### 🎮 Videojuegos y rol
 
 - [Pokémon Infinite](https://github.com/Klymapo/pokemon-infinito) — RPG personal para móvil.
-- [Ficha D&D](https://github.com/Klymapo/ficha-dnd) — ficha interactiva de rol.
 
 ### 🎨 Modelado y producción 3D
 
