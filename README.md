@@ -1,5 +1,8 @@
 # ¡Hola! Soy Atátoriz 👋
 
+> **Empieza aquí:** [Guía fácil: qué es, dónde está y qué conservar](docs/GUIA_RAPIDA.md). No necesitas leer la documentación técnica para orientarte.
+
+
 Desarrollo herramientas de datos, software y proyectos narrativos. Aquí comparto prototipos, experimentos y aplicaciones; el objetivo es documentar tanto lo que funciona como lo que sigo aprendiendo.
 
 **Áreas de trabajo:** Python · SQL · análisis de datos · Power BI · desarrollo web · Godot · automatización · Blender.
