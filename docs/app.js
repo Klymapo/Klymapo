@@ -15,7 +15,7 @@ const CURATED = [
 const LABELS={all:"Todos",videojuegos:"Videojuegos",modelado:"Modelado 3D",apps:"Aplicaciones e IA",datos:"Data y portafolio",escritura:"Escritura",historico:"Archivo histórico"};
 const OWNER="Klymapo", CACHE_KEY="klymapo_public_metadata_v1", FAV_KEY="klymapo_public_favorites_v1";
 const FOUR_HOURS=4*60*60*1000;
-const state={category:"all",favoritesOnly:false,query:"",sort:"featured",metadata:{},lastSync:0,favorites:[]};
+const state={category:"all",favoritesOnly:false,query:"",sort:"featured",metadata:{},lastSync:0,favorites:[],view:"folders"};
 
 function safeLoad(key,fallback){try{const value=JSON.parse(localStorage.getItem(key)||"null");return value===null?fallback:value;}catch{return fallback;}}
 function safeSave(key,value){try{localStorage.setItem(key,JSON.stringify(value));}catch{/* Modo privado o almacenamiento deshabilitado: sesión sin persistencia */}}
@@ -23,6 +23,8 @@ const stored=safeLoad(CACHE_KEY,null);
 if(stored && typeof stored==="object" && typeof stored.timestamp==="number" && stored.repos && typeof stored.repos==="object"){
   state.metadata=stored.repos;state.lastSync=stored.timestamp;
 }
+const viewPreference=safeLoad("klymapo_view_mode_v1","folders");
+state.view=(viewPreference==="cards"?"cards":"folders");
 const previousFavorites=safeLoad(FAV_KEY,[]);
 state.favorites=Array.isArray(previousFavorites)?previousFavorites.filter(x=>typeof x==="string"&&CURATED.some(r=>r.slug===x)):[];
 const $=id=>document.getElementById(id);
@@ -62,8 +64,46 @@ function buildCard(repo){
   const link=node("a","card-action","Ver repositorio ↗");link.href=projectUrl(repo);link.target="_blank";link.rel="noopener noreferrer";link.setAttribute("aria-label","Abrir "+repo.title+" en GitHub");footer.append(link);
   card.append(footer);return card;
 }
+const AREA_ORDER=["videojuegos","modelado","apps","historico","datos","escritura"];
+const AREA_DESCRIPTIONS={
+  videojuegos:"Aventuras, juegos de rol y herramientas de juego.",
+  modelado:"Modelos, producción de assets y experimentación visual.",
+  apps:"Aplicaciones, automatizaciones y herramientas inteligentes.",
+  historico:"Primeros proyectos y fuentes preservadas. No se eliminan.",
+  datos:"Proyectos de análisis y portafolio público.",
+  escritura:"Proyectos literarios que se publiquen expresamente."
+};
+const AREA_SYMBOLS={videojuegos:"◇",modelado:"⬡",apps:"⌘",historico:"◷",datos:"◫",escritura:"✎"};
+function buildFolder(cat,items){
+  const section=node("section","folder-section");
+  section.setAttribute("aria-label",LABELS[cat]);
+  const head=node("div","folder-head");
+  const caption=node("div","folder-caption");
+  caption.append(node("span","folder-icon",AREA_SYMBOLS[cat]||"▦"));
+  const info=node("div","folder-head-copy");
+  info.append(node("h3","",LABELS[cat]));
+  info.append(node("p","",AREA_DESCRIPTIONS[cat]));
+  caption.append(info);head.append(caption);
+  head.append(node("span","folder-count",items.length+" proyecto"+(items.length===1?"":"s")));
+  section.append(head);
+  const grid=node("div","cards-grid");grid.append(...items.map(buildCard));section.append(grid);
+  return section;
+}
 function render(){
-  const items=filtered(), grid=$("repo-grid");grid.replaceChildren(...items.map(buildCard));
+  const items=filtered(), grid=$("repo-grid");
+  if(state.view==="folders"){
+    const grouped=AREA_ORDER.filter(cat=>items.some(x=>x.category===cat)).map(cat=>buildFolder(cat,items.filter(x=>x.category===cat)));
+    grid.className="repo-list folders-view";
+    grid.replaceChildren(...grouped);
+  }else{
+    grid.className="repo-list cards-grid";
+    grid.replaceChildren(...items.map(buildCard));
+  }
+  const folders=state.view==="folders";
+  $("view-folders").classList.toggle("active",folders);
+  $("view-cards").classList.toggle("active",!folders);
+  $("view-folders").setAttribute("aria-pressed",String(folders));
+  $("view-cards").setAttribute("aria-pressed",String(!folders));
   $("empty-state").classList.toggle("hidden",items.length!==0);
   $("results-count").textContent=items.length+" resultado"+(items.length===1?"":"s");
   $("metric-total").textContent=CURATED.length;
@@ -106,6 +146,9 @@ document.querySelectorAll("[data-chip]").forEach(x=>x.addEventListener("click",(
 $("favorites-link").addEventListener("click",()=>{state.favoritesOnly=true;state.category="all";render();closeMenu();});
 $("search-input").addEventListener("input",e=>{state.query=e.target.value.trim();render();});
 $("sort-select").addEventListener("change",e=>{state.sort=e.target.value;render();});
+function setView(next){state.view=next;safeSave("klymapo_view_mode_v1",next);render();}
+$("view-folders").addEventListener("click",()=>setView("folders"));
+$("view-cards").addEventListener("click",()=>setView("cards"));
 $("clear-filters").addEventListener("click",()=>{state.query="";$("search-input").value="";setCategory("all");});
 $("refresh-button").addEventListener("click",()=>refresh(true));
 $("explore-button").addEventListener("click",()=>document.getElementById("projects").scrollIntoView({behavior:"smooth",block:"start"}));
