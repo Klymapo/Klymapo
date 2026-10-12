@@ -30,7 +30,7 @@ La investigación paramétrica, las pruebas de estilización y el juego Godot ti
 
 | Repositorio | Uso | Topics propuestos |
 | --- | --- | --- |
-| [ALASTHEO](https://github.com/Klymapo/ALASTHEO) | Fuente histórica integrada en alth-meta; actualmente archivado | `alastheo`, `archive`, `3d-modeling` |
+| [Legado ALASTHEO](https://github.com/Klymapo/alth-meta/tree/main/docs/integration) | Documentación y versiones históricas integradas en alth-meta; no requiere un repositorio separado activo | Sin topics propios |
 | [Archivo de aprendizaje](../archive/learning/README.md) | Código histórico de Terminal Adventure y Dungeon Meshi Delivery, integrado en el repositorio de perfil | Sin repositorios independientes nuevos |
 
 **Archivo histórico** es una *clasificación editorial*; no significa que todos estos repositorios hayan sido archivados mediante la función Archive de GitHub.
