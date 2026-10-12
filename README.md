@@ -4,6 +4,12 @@ Desarrollo herramientas de datos, software y proyectos narrativos. Aquí compart
 
 **Áreas de trabajo:** Python · SQL · análisis de datos · Power BI · desarrollo web · Godot · automatización · Blender.
 
+## Centro de Control
+
+🗂️ [Ver código y guía del dashboard](docs/DEPLOYMENT.md) · [Abrir el explorador (GitHub Pages, una vez activado)](https://klymapo.github.io/Klymapo/)
+
+El explorador muestra únicamente **proyectos públicos**, permite buscar y filtrar por área y consulta actividad pública en GitHub. Para los proyectos privados y las tareas, utiliza [GitHub Projects](https://github.com/users/Klymapo/projects). **La publicación web requiere habilitar GitHub Pages en Settings → Pages con `main` / `docs`.**
+
 ## Proyectos públicos
 
 | Área | Repositorio | De qué trata |
