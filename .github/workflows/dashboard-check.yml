@@ -1,0 +1,23 @@
+name: Dashboard público · sintaxis y enlaces curados
+on:
+  pull_request:
+    paths: ["docs/**", ".github/workflows/dashboard-check.yml"]
+  push:
+    branches: [main]
+    paths: ["docs/**"]
+permissions:
+  contents: read
+concurrency:
+  group: dashboard-check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sintaxis del dashboard
+        run: node --check docs/app.js
+      - name: No promocionar repositorios retirados
+        run: |
+          node -e "const fs=require('fs'),s=fs.readFileSync('docs/app.js','utf8'); if(s.includes('slug:\"ficha-dnd\"'))process.exit(1); if(!s.includes('slug:\"pokemon-infinito\"'))process.exit(2);"
