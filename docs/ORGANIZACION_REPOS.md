@@ -54,7 +54,7 @@ Esta operación requiere acceso a los ajustes de GitHub. El conector usado para 
 2. alth-meta — modelado y pipeline 3D (incluye Stylizer y documentación ALASTHEO).
 3. rupert — aplicación/arquitectura cloud.
 4. pokemon-infinito — videojuego personal.
-5. ficha-dnd — interfaz web de herramienta.
+
 La ficha de mesa D&D se consolidó en un repositorio privado de juego; no se enumera aquí como aplicación pública independiente. El repositorio público antiguo podrá desaparecer cuando se complete la exportación de datos del navegador.
 
 Solo hay cuatro proyectos principales públicos listados, así que no es necesario llenar seis lugares con repositorios archivados o ficticios. En el perfil de GitHub: **Customize your pins** → marcar los existentes → ordenarlos → **Save pins**.
