@@ -28,7 +28,7 @@ El explorador muestra únicamente **proyectos públicos**, permite buscar y filt
 
 ### 🗃️ Archivo histórico
 
-- [ALASTHEO](https://github.com/Klymapo/ALASTHEO) — origen ya archivado e integrado en ALTH-META.
+- [Historia de ALASTHEO](https://github.com/Klymapo/alth-meta/tree/main/docs/integration) — legado integrado en ALTH-META y preservación de ramas y decisiones.
 - [Archivo de aprendizaje](archive/learning/README.md) — reúne el RPG Python *Terminal Adventure* y la práctica HTML *Dungeon Meshi Delivery*, preservados sin mantener dos repositorios activos.
 
 **Áreas reservadas:** Data y portafolio · Escritura. Los proyectos privados no aparecen en esta lista pública.
