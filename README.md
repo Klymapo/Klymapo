@@ -1,46 +1,42 @@
-# ¡Hola! Soy Atátoriz 👋
+<div align="center">
 
-> **Empieza aquí:** [Guía fácil: qué es, dónde está y qué conservar](docs/GUIA_RAPIDA.md). No necesitas leer la documentación técnica para orientarte.
+# Mario Martínez Horta
 
+**Klymapo** en código · **Atátoriz** en historias
 
-Desarrollo herramientas de datos, software y proyectos narrativos. Aquí comparto prototipos, experimentos y aplicaciones; el objetivo es documentar tanto lo que funciona como lo que sigo aprendiendo.
+Datos de día. Historias de noche.
 
-**Áreas de trabajo:** Python · SQL · análisis de datos · Power BI · desarrollo web · Godot · automatización · Blender.
+### [▶ Press Start · klymapo.github.io](https://klymapo.github.io/)
 
-## Centro de Control
+</div>
 
-🗂️ [Explorar el dashboard](https://klymapo.github.io/Klymapo/) · [Mapa de repositorios y Topics](docs/ORGANIZACION_REPOS.md) · [Guía del dashboard](docs/DEPLOYMENT.md)
+---
 
-El explorador muestra únicamente **proyectos públicos**, permite buscar y filtrar por área y consulta actividad pública en GitHub. Para los proyectos privados y las tareas, utiliza [GitHub Projects](https://github.com/users/Klymapo/projects). La interfaz publicada se alimenta de los repositorios públicos; los proyectos privados se administran aparte.
+Analista de datos (Data Analyst Intern en Honeywell) y estudiante de Ingeniería Industrial y Administración. Construyo apps, herramientas de datos y videojuegos con presupuesto cero; como Atátoriz escribo novela negra y ciencia ficción juvenil.
 
-## Proyectos públicos ordenados
+**Herramientas:** Python · SQL · Power BI · JavaScript · Godot · Blender · GitHub Actions
 
-### 🎮 Videojuegos y rol
+## La ciudad que construí este año
 
-- [Pokémon Infinite](https://github.com/Klymapo/pokemon-infinito) — RPG personal para móvil.
+![Contribuciones en 3D](./profile-3d-contrib/profile-night-green.svg)
 
-### 🎨 Modelado y producción 3D
+## Partidas guardadas (públicas)
 
-- [ALTH-META / AlasTheo](https://github.com/Klymapo/alth-meta) — assets 3D, estándares, pruebas y COPOX.
+| Proyecto | Qué es |
+|---|---|
+| [RACOON](https://github.com/Klymapo/RACOON) | PWA local-first para seguir series de anime |
+| [ATLAS](https://github.com/Klymapo/ATLAS) | Aventura detectivesca para aprender cinco idiomas |
+| [Rupert](https://github.com/Klymapo/RUPERT) | Asistente personal por voz, pensado para el celular |
+| [NAOFUMI](https://github.com/Klymapo/NAOFUMI) | Radar freelance local para encargos y cobros |
+| [MORIARTY](https://github.com/Klymapo/MORIARTY-) | Estudio de escritura offline |
+| [COPOX](https://github.com/Klymapo/COPOX) | Personajes 3D low-poly generados con scripts de Blender |
+| [SUNRAKU](https://github.com/Klymapo/SUNRAKU-) | Estudio de voz IA (en diseño) |
+| [Pokémon Infinito](https://github.com/Klymapo/PKM-INFINITE) | Prototipo de RPG para móvil (fangame personal, no oficial) |
 
-### 🤖 Aplicaciones e IA
+Los proyectos privados (videojuego, análisis de datos y escritura) tienen su ficha en el [portafolio](https://klymapo.github.io/).
 
-- [ATLAS · Cuatro Voces](https://github.com/Klymapo/ATLAS) — aventura detectivesca de aprendizaje multilingüe.
-- [Rupert](https://github.com/Klymapo/rupert) — asistente personal con arquitectura en la nube.
+## Contacto
 
-### 🗃️ Archivo histórico
+[Correo](mailto:mariomtzhrt@gmail.com) · [LinkedIn](https://www.linkedin.com/in/mariomh7602)
 
-- [Historia de ALASTHEO](https://github.com/Klymapo/alth-meta/tree/main/docs/integration) — legado integrado en ALTH-META y preservación de ramas y decisiones.
-- [Archivo de aprendizaje](archive/learning/README.md) — reúne el RPG Python *Terminal Adventure* y la práctica HTML *Dungeon Meshi Delivery*, preservados sin mantener dos repositorios activos.
-
-**Áreas reservadas:** Data y portafolio · Escritura. Los proyectos privados no aparecen en esta lista pública.
-
-El [mapa detallado](docs/ORGANIZACION_REPOS.md) incluye Topics recomendados y el procedimiento para fijar los repositorios destacados.
-
-## Datos, tecnología y narrativa
-
-Me interesan los procesos industriales, la mecatrónica, los sistemas de datos y la creación de mundos. Trabajo también en ficción bajo el seudónimo **Atátoriz**.
-
-> Este perfil es un índice de proyectos **públicos**. Los repositorios privados y los manuscritos no se enumeran aquí. La presencia de un proyecto no implica que esté terminado ni desplegado.
-
-Última revisión del índice: 2026-10-12.
+<sub>El Centro de Control anterior quedó archivado en <code>archive/centro-de-control/</code>.</sub>
