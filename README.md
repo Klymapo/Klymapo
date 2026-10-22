@@ -31,7 +31,6 @@ Analista de datos (Data Analyst Intern en Honeywell) y estudiante de Ingeniería
 | [MORIARTY](https://github.com/Klymapo/MORIARTY-) | Estudio de escritura offline |
 | [COPOX](https://github.com/Klymapo/COPOX) | Personajes 3D low-poly generados con scripts de Blender |
 | [SUNRAKU](https://github.com/Klymapo/SUNRAKU-) | Estudio de voz IA (en diseño) |
-| [Pokémon Infinito](https://github.com/Klymapo/PKM-INFINITE) | Prototipo de RPG para móvil (fangame personal, no oficial) |
 
 Los proyectos privados (videojuego, análisis de datos y escritura) tienen su ficha en el [portafolio](https://klymapo.github.io/).
 
